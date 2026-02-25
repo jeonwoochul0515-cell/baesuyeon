@@ -1,73 +1,45 @@
-# React + TypeScript + Vite
+# 일품배쌤수학 홈페이지
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+경상북도 경주시 소재 수학 전문 학원 **일품배쌤수학**의 공식 홈페이지입니다.
 
-Currently, two official plugins are available:
+## 소개
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 20년 경력의 경주 지역 수학 전문 강사
+- 최대 4명 소규모 그룹 수업 / 1:1 맞춤형 지도
+- 초등부(초3~초6), 중등부(중1~중3), 고등부(고1~고3) 운영
+- 내신 대비 + 수능 대비 병행
 
-## React Compiler
+## 주요 섹션
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **홈(Hero)** - 메인 비주얼 및 핵심 소개
+- **소개(About)** - 강사 소개 및 학원 강점
+- **프로그램(Program)** - 초등부 / 중등부 / 고등부 커리큘럼
+- **학습시스템(System)** - 주차별 개념 시스템, 서술형 대비, 실수 추적 관리
+- **성과(Results)** - 학생 성적 향상 사례
+- **상담신청(Contact)** - 전화 상담 및 위치 안내
 
-## Expanding the ESLint configuration
+## 기술 스택
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** + **TypeScript**
+- **Vite** (빌드 도구)
+- **Firebase Hosting** (배포)
+- 반응형 디자인 / FadeIn 애니메이션 / SEO 최적화
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 실행 방법
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 빌드
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+## 연락처
+
+- 전화: 010-4812-6947
+- 주소: 경상북도 경주시 황성로28번길 6
+- 블로그: https://blog.naver.com/kimchi295
