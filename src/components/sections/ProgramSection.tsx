@@ -2,7 +2,11 @@
 import FadeIn from '../common/FadeIn';
 import { PROGRAMS } from '../../data/programs';
 
-export default function ProgramSection() {
+interface ProgramSectionProps {
+  scrollTo: (id: string) => void;
+}
+
+export default function ProgramSection({ scrollTo }: ProgramSectionProps) {
   return (
     <section id="program" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #FAFAF7 0%, #F5F3EE 100%)' }}>
       <div className="container" style={{ maxWidth: 1100, margin: '0 auto', padding: '0 32px' }}>
@@ -66,6 +70,30 @@ export default function ProgramSection() {
             </FadeIn>
           ))}
         </div>
+
+        {/* CTA after programs */}
+        <FadeIn delay={0.3}>
+          <div style={{
+            marginTop: 40, textAlign: 'center',
+            padding: '32px 24px',
+            background: 'white',
+            borderRadius: 24,
+            border: '1px solid rgba(0,0,0,0.04)',
+          }}>
+            <div style={{ fontSize: 15, color: '#888', marginBottom: 6 }}>
+              어떤 프로그램이 우리 아이에게 맞을지 궁금하시다면
+            </div>
+            <div style={{ fontSize: 20, fontWeight: 800, color: '#1a1a2e', marginBottom: 20, fontFamily: "'Nanum Myeongjo', serif" }}>
+              무료 상담으로 맞춤 안내를 받아보세요
+            </div>
+            <button className="cta-btn" onClick={() => scrollTo('contact')} style={{ fontSize: 15, padding: '14px 32px' }}>
+              프로그램 상담 신청 →
+            </button>
+            <div style={{ marginTop: 12, fontSize: 12, color: '#bbb' }}>
+              반당 최대 4명 · 잔여석이 적을 수 있습니다
+            </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

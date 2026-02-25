@@ -68,6 +68,21 @@ body {
   50% { transform: scale(1.05); }
 }
 
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 8px 30px rgba(255,107,107,0.3); }
+  50% { box-shadow: 0 8px 40px rgba(255,107,107,0.55), 0 0 0 8px rgba(255,107,107,0.1); }
+}
+
+@keyframes floatingCtaSlide {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes badgePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
 .program-card {
   background: white;
   border-radius: 24px;
@@ -131,6 +146,51 @@ body {
 .cta-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 14px 40px rgba(255,107,107,0.4);
+}
+
+.cta-pulse {
+  animation: ctaPulse 2.5s ease-in-out infinite;
+}
+.cta-pulse:hover {
+  animation: none;
+}
+
+.floating-cta-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 90;
+  background: linear-gradient(135deg, #FF6B6B 0%, #ee5a24 100%);
+  padding: 14px 24px;
+  display: flex; align-items: center; justify-content: center; gap: 16;
+  box-shadow: 0 -4px 30px rgba(255,107,107,0.3);
+  animation: floatingCtaSlide 3s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+
+.floating-cta-bar.hidden {
+  transform: translateY(100%);
+}
+
+.scarcity-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(255,107,107,0.12);
+  border: 1px solid rgba(255,107,107,0.2);
+  border-radius: 30px;
+  font-size: 13px; font-weight: 700;
+  color: #FF6B6B;
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+.trust-strip {
+  display: flex; align-items: center; justify-content: center;
+  gap: 24px; flex-wrap: wrap;
+  padding: 14px 24px;
+  background: #F8F6F1;
+  font-size: 13px; color: #999; font-weight: 500;
+}
+
+footer {
+  padding-bottom: 80px !important;
 }
 
 .input-field {

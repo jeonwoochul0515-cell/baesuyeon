@@ -2,7 +2,11 @@
 import FadeIn from '../common/FadeIn';
 import { GRADE_IMPROVEMENTS, UNIVERSITY_RESULTS, TESTIMONIALS } from '../../data/results';
 
-export default function ResultsSection() {
+interface ResultsSectionProps {
+  scrollTo: (id: string) => void;
+}
+
+export default function ResultsSection({ scrollTo }: ResultsSectionProps) {
   return (
     <section id="results" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #FAFAF7 0%, #F5F3EE 100%)' }}>
       <div className="container" style={{ maxWidth: 1100, margin: '0 auto', padding: '0 32px' }}>
@@ -189,6 +193,33 @@ export default function ResultsSection() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* CTA after testimonials */}
+        <FadeIn delay={0.4}>
+          <div style={{
+            marginTop: 48, textAlign: 'center',
+            padding: '40px 24px',
+            background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+            borderRadius: 24,
+            position: 'relative', overflow: 'hidden',
+          }}>
+            <div style={{
+              position: 'absolute', inset: 0, opacity: 0.05,
+              background: 'radial-gradient(circle at 50% 50%, rgba(255,107,107,0.5) 0%, transparent 60%)',
+            }} />
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              <div style={{ fontSize: 22, fontWeight: 800, color: 'white', marginBottom: 10, fontFamily: "'Nanum Myeongjo', serif" }}>
+                다음 성공 이야기의 주인공은<br />우리 아이가 될 수 있습니다
+              </div>
+              <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)', marginBottom: 24 }}>
+                서울대·의대 합격생을 배출한 검증된 시스템으로 시작하세요
+              </div>
+              <button className="cta-btn cta-pulse" onClick={() => scrollTo('contact')} style={{ fontSize: 16, padding: '16px 40px' }}>
+                무료 상담 신청하기 →
+              </button>
             </div>
           </div>
         </FadeIn>

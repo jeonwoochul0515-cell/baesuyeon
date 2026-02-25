@@ -1,7 +1,11 @@
 
 import FadeIn from '../common/FadeIn';
 
-export default function AboutSection() {
+interface AboutSectionProps {
+  scrollTo: (id: string) => void;
+}
+
+export default function AboutSection({ scrollTo }: AboutSectionProps) {
   return (
     <section id="about" style={{ padding: '100px 0 80px' }}>
       <div className="container" style={{ maxWidth: 1000, margin: '0 auto', padding: '0 32px' }}>
@@ -60,6 +64,26 @@ export default function AboutSection() {
             </div>
           </FadeIn>
         </div>
+
+        {/* CTA after about */}
+        <FadeIn delay={0.3}>
+          <div style={{
+            marginTop: 48, textAlign: 'center',
+            padding: '36px 24px',
+            background: 'linear-gradient(135deg, #FFF5F5, #FFF0E6)',
+            borderRadius: 24,
+          }}>
+            <div style={{ fontSize: 18, fontWeight: 700, color: '#1a1a2e', marginBottom: 8, fontFamily: "'Nanum Myeongjo', serif" }}>
+              20년 경험의 배쌤과 함께 시작하세요
+            </div>
+            <div style={{ fontSize: 14, color: '#888', marginBottom: 20 }}>
+              아이의 현재 수준과 목표에 맞는 학습 방향을 상담해드립니다
+            </div>
+            <button className="cta-btn" onClick={() => scrollTo('contact')} style={{ fontSize: 15, padding: '14px 32px' }}>
+              무료 상담 신청 →
+            </button>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

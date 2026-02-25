@@ -16,12 +16,36 @@ export default function ContactSection() {
     <section id="contact" style={{ padding: '80px 0 100px', background: 'linear-gradient(180deg, #FAFAF7 0%, #F0EDE6 100%)' }}>
       <div className="container" style={{ maxWidth: 700, margin: '0 auto', padding: '0 32px' }}>
         <FadeIn>
-          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+          <div style={{ textAlign: 'center', marginBottom: 40 }}>
             <span className="section-label" style={{ background: '#FFF0F0', color: '#FF6B6B' }}>CONTACT</span>
             <h2 className="section-title" style={{ fontFamily: "'Nanum Myeongjo', serif", fontSize: 36, fontWeight: 800, letterSpacing: -0.5 }}>
-              상담 신청
+              지금 바로 상담 신청하세요
             </h2>
-            <p style={{ fontSize: 16, color: '#888', marginTop: 12 }}>편하게 연락 주세요. 친절하게 안내드리겠습니다.</p>
+            <p style={{ fontSize: 16, color: '#888', marginTop: 12, lineHeight: 1.7 }}>
+              상담은 <strong style={{ color: '#FF6B6B' }}>무료</strong>이며, 아이의 현재 수준과 목표에 맞는 학습 방향을 안내드립니다.
+            </p>
+          </div>
+        </FadeIn>
+
+        {/* Trust signals */}
+        <FadeIn delay={0.08}>
+          <div style={{
+            display: 'flex', justifyContent: 'center', gap: 20, marginBottom: 32, flexWrap: 'wrap',
+          }}>
+            {[
+              { icon: '🏆', text: '서울대·의대 합격 배출' },
+              { icon: '👥', text: '반당 최대 4명' },
+              { icon: '📅', text: '20년 경력' },
+            ].map((t, i) => (
+              <div key={i} style={{
+                display: 'flex', alignItems: 'center', gap: 6,
+                padding: '8px 16px', background: 'white',
+                borderRadius: 30, fontSize: 13, fontWeight: 600, color: '#666',
+                border: '1px solid rgba(0,0,0,0.06)',
+              }}>
+                <span>{t.icon}</span> {t.text}
+              </div>
+            ))}
           </div>
         </FadeIn>
 
@@ -40,7 +64,7 @@ export default function ContactSection() {
           >
             <span style={{ fontSize: 32 }}>📞</span>
             <div>
-              <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>전화 상담</div>
+              <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>지금 바로 전화 상담</div>
               <div style={{ color: 'white', fontSize: 28, fontWeight: 900, letterSpacing: 1 }}>{PHONE}</div>
             </div>
           </a>
@@ -50,7 +74,10 @@ export default function ContactSection() {
             boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
             border: '1px solid rgba(0,0,0,0.04)',
           }}>
-            <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 24, textAlign: 'center' }}>💬 온라인 상담 신청</div>
+            <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 8, textAlign: 'center' }}>💬 온라인 상담 신청</div>
+            <div style={{ fontSize: 13, color: '#aaa', textAlign: 'center', marginBottom: 24 }}>
+              이름과 연락처만 남겨주시면 빠르게 연락드립니다
+            </div>
 
             {formSent ? (
               <div style={{ textAlign: 'center', padding: '40px 0' }}>
@@ -65,6 +92,7 @@ export default function ContactSection() {
                   placeholder="학생 이름"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  autoFocus={false}
                 />
                 <input
                   className="input-field"
@@ -78,7 +106,7 @@ export default function ContactSection() {
                   onChange={(e) => setFormData({ ...formData, grade: e.target.value })}
                   style={{ color: formData.grade ? '#1a1a2e' : '#aaa' }}
                 >
-                  <option value="">학년 선택</option>
+                  <option value="">학년 선택 (선택사항)</option>
                   <option>초등 3학년</option>
                   <option>초등 4학년</option>
                   <option>초등 5학년</option>
@@ -99,14 +127,30 @@ export default function ContactSection() {
                   style={{ resize: 'vertical' }}
                 />
                 <button
-                  className="cta-btn"
+                  className="cta-btn cta-pulse"
                   onClick={handleSubmit}
-                  style={{ width: '100%', justifyContent: 'center', fontSize: 16, marginTop: 4 }}
+                  style={{ width: '100%', justifyContent: 'center', fontSize: 17, marginTop: 4, padding: '18px 36px' }}
                 >
-                  상담 신청하기
+                  무료 상담 신청하기
                 </button>
+                <div style={{ textAlign: 'center', fontSize: 12, color: '#bbb', marginTop: 4 }}>
+                  개인정보는 상담 목적으로만 사용되며 안전하게 관리됩니다
+                </div>
               </div>
             )}
+          </div>
+
+          {/* Urgency note */}
+          <div style={{
+            marginTop: 24, padding: '16px 20px',
+            background: '#FFF8F0',
+            border: '1px solid rgba(255,140,66,0.15)',
+            borderRadius: 16,
+            textAlign: 'center',
+            fontSize: 14, color: '#AA7744', lineHeight: 1.6,
+          }}>
+            <strong>반당 최대 4명</strong> 소규모 수업으로 운영되어 정원이 제한됩니다.<br />
+            조기 마감될 수 있으니 미리 상담 신청해 주세요.
           </div>
         </FadeIn>
       </div>

@@ -9,24 +9,26 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
   return (
     <section id="home" className="hero-section">
       <div className="hero-grid" />
-      <div className="float-math" style={{ top: '15%', left: '10%' }}>∫</div>
-      <div className="float-math" style={{ top: '60%', right: '8%', animationDelay: '5s', fontSize: 60 }}>π</div>
-      <div className="float-math" style={{ bottom: '20%', left: '25%', animationDelay: '10s', fontSize: 50 }}>Σ</div>
-      <div className="float-math" style={{ top: '30%', right: '25%', animationDelay: '7s', fontSize: 70 }}>∞</div>
+      <div className="float-math" style={{ top: '15%', left: '10%' }}>&#x222B;</div>
+      <div className="float-math" style={{ top: '60%', right: '8%', animationDelay: '5s', fontSize: 60 }}>&pi;</div>
+      <div className="float-math" style={{ bottom: '20%', left: '25%', animationDelay: '10s', fontSize: 50 }}>&Sigma;</div>
+      <div className="float-math" style={{ top: '30%', right: '25%', animationDelay: '7s', fontSize: 70 }}>&infin;</div>
 
       <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: '0 24px', maxWidth: 800 }}>
+        {/* Scarcity badge */}
         <div style={{
           display: 'inline-block',
           padding: '8px 20px',
           background: 'rgba(255,107,107,0.15)',
+          border: '1px solid rgba(255,107,107,0.25)',
           borderRadius: 30,
-          fontSize: 14, fontWeight: 600,
+          fontSize: 14, fontWeight: 700,
           color: '#FF9F9F',
           marginBottom: 28,
-          animation: 'fadeInUp 0.8s ease',
+          animation: 'fadeInUp 0.8s ease, badgePulse 2.5s ease-in-out infinite',
           letterSpacing: 1,
         }}>
-          경주 황성동 · 중등/고등 내신 전문
+          반당 최대 4명 · 잔여석 문의
         </div>
 
         <h1
@@ -38,13 +40,13 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
             animation: 'fadeInUp 0.8s ease 0.15s both',
           }}
         >
-          수학이 어려운 순간,<br />
+          우리 아이 수학 성적,<br />
           <span style={{
             background: 'linear-gradient(135deg, #FF6B6B 0%, #FFD93D 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }}>
-            배쌤이 함께합니다
+            지금이 바꿀 때입니다
           </span>
         </h1>
 
@@ -57,13 +59,28 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
             fontWeight: 300,
           }}
         >
-          학생 한 명 한 명에게 맞춘 1:1 개념 설명<br />
-          최대 4명 소규모 수업으로 확실한 성적 향상
+          20년 경력 배수연 선생님의 1:1 맞춤 수업<br />
+          서울대·의대 합격생을 배출한 검증된 학습 시스템
         </p>
 
-        <div style={{ marginTop: 40, animation: 'fadeInUp 0.8s ease 0.45s both', display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <button className="cta-btn" onClick={() => scrollTo('contact')}>
-            상담 신청하기 →
+        {/* Social proof line */}
+        <div style={{
+          marginTop: 20,
+          animation: 'fadeInUp 0.8s ease 0.38s both',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+          fontSize: 14, color: 'rgba(255,255,255,0.45)',
+        }}>
+          <span style={{ fontSize: 16 }}>⭐⭐⭐⭐⭐</span>
+          <span>학부모 만족도 — "든든한 버팀목"</span>
+        </div>
+
+        <div style={{ marginTop: 36, animation: 'fadeInUp 0.8s ease 0.45s both', display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <button
+            className="cta-btn cta-pulse"
+            onClick={() => scrollTo('contact')}
+            style={{ fontSize: 18, padding: '18px 44px' }}
+          >
+            무료 상담 신청하기 →
           </button>
           <a
             href={`tel:${PHONE.replace(/-/g, '')}`}
@@ -79,12 +96,20 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
               transition: 'all 0.3s',
             }}
           >
-            📞 {PHONE}
+            📞 바로 전화하기
           </a>
         </div>
 
         <div style={{
-          marginTop: 60,
+          marginTop: 16,
+          animation: 'fadeInUp 0.8s ease 0.5s both',
+          fontSize: 13, color: 'rgba(255,255,255,0.35)',
+        }}>
+          상담은 무료입니다 · 부담 없이 문의하세요
+        </div>
+
+        <div style={{
+          marginTop: 52,
           display: 'flex', gap: 40, justifyContent: 'center',
           animation: 'fadeInUp 0.8s ease 0.6s both',
           flexWrap: 'wrap',
