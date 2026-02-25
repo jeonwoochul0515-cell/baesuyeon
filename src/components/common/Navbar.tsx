@@ -28,12 +28,12 @@ export default function Navbar({ activeNav, scrollY, menuOpen, setMenuOpen, scro
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             color: 'white', fontWeight: 900, fontSize: 18,
             fontFamily: "'Nanum Myeongjo', serif",
-          }}>배</div>
+          }}>이</div>
           <span style={{
             fontSize: 18, fontWeight: 800, letterSpacing: -0.5,
             color: scrollY > 80 ? '#1a1a2e' : 'white',
             transition: 'color 0.3s',
-          }}>일품배쌤수학</span>
+          }}>이룸수학</span>
         </button>
 
         <div className="desktop-nav" style={{ display: 'flex', gap: 4 }}>

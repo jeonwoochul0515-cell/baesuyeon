@@ -30,7 +30,7 @@ export default function AboutSection({ scrollTo }: AboutSectionProps) {
               <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)', fontWeight: 600, letterSpacing: 1, marginBottom: 8 }}>TEACHER</div>
               <div style={{ fontSize: 28, fontWeight: 800, fontFamily: "'Nanum Myeongjo', serif", marginBottom: 8 }}>배수연</div>
               <div style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>
-                일품배쌤수학 원장<br />
+                이룸수학 원장<br />
                 20년 경력 수학 전문 강사<br />
                 중등·고등 내신 전문
               </div>

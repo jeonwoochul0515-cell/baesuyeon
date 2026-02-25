@@ -21,8 +21,8 @@ export default function Footer({ scrollTo }: FooterProps) {
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               color: 'white', fontWeight: 900, fontSize: 16,
               fontFamily: "'Nanum Myeongjo', serif",
-            }}>배</div>
-            <span style={{ fontSize: 16, fontWeight: 700, color: 'rgba(255,255,255,0.8)' }}>일품배쌤수학</span>
+            }}>이</div>
+            <span style={{ fontSize: 16, fontWeight: 700, color: 'rgba(255,255,255,0.8)' }}>이룸수학</span>
           </div>
           <div style={{ fontSize: 13, lineHeight: 2 }}>
             📍 {ADDRESS}<br />
@@ -89,7 +89,7 @@ export default function Footer({ scrollTo }: FooterProps) {
         paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)',
         fontSize: 12, textAlign: 'center', color: 'rgba(255,255,255,0.25)',
       }}>
-        © 2025 일품배쌤수학. All rights reserved.
+        © 2025 이룸수학. All rights reserved.
       </div>
     </footer>
   );

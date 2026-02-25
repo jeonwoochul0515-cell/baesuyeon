@@ -23,11 +23,11 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    document.title = '경주수학학원 일품배쌤수학 | 황성동 중등·고등 수학 전문학원 (최대4명)';
+    document.title = '경주수학학원 이룸수학 | 황성동 중등·고등 수학 전문학원 (최대4명)';
     // Update existing meta tags instead of creating duplicates
     const existingDesc = document.querySelector('meta[name="description"]');
     if (existingDesc) {
-      existingDesc.setAttribute('content', '경주수학학원 일품배쌤수학. 경주시 황성동 위치, 20년 경력 수학 전문 강사 배수연. 최대 4명 소규모 맞춤 수업. 서울대·의대 합격 배출. 경주고, 문화고, 계림고, 경주여고 내신 전문. ☎ 010-4812-6947');
+      existingDesc.setAttribute('content', '경주수학학원 이룸수학. 경주시 황성동 위치, 20년 경력 수학 전문 강사 배수연. 최대 4명 소규모 맞춤 수업. 서울대·의대 합격 배출. 경주고, 문화고, 계림고, 경주여고 내신 전문. ☎ 010-4812-6947');
     }
     const existingKeywords = document.querySelector('meta[name="keywords"]');
     if (existingKeywords) {

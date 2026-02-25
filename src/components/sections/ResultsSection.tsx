@@ -118,7 +118,7 @@ export default function ResultsSection({ scrollTo }: ResultsSectionProps) {
                 <div style={{ textAlign: 'center', marginBottom: 32 }}>
                   <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)', fontWeight: 600, letterSpacing: 2, marginBottom: 8 }}>2026 수시 합격 현황</div>
                   <div style={{ fontSize: 24, fontWeight: 800, color: 'white', fontFamily: "'Nanum Myeongjo', serif" }}>
-                    일품배쌤에서 꿈을 이룬 학생들
+                    이룸수학에서 꿈을 이룬 학생들
                   </div>
                 </div>
 
