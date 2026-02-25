@@ -20,19 +20,18 @@ export default function AboutSection({ scrollTo }: AboutSectionProps) {
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center' }}>
           <FadeIn delay={0.1} direction="left">
-            <div style={{
-              background: 'linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%)',
-              borderRadius: 28, padding: 40, color: 'white',
-              position: 'relative', overflow: 'hidden',
-            }}>
-              <div style={{ position: 'absolute', top: -20, right: -20, fontSize: 120, opacity: 0.05, fontFamily: "'Nanum Myeongjo', serif" }}>數</div>
-              <div style={{ fontSize: 48, marginBottom: 20 }}>👨‍🏫</div>
-              <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)', fontWeight: 600, letterSpacing: 1, marginBottom: 8 }}>TEACHER</div>
-              <div style={{ fontSize: 28, fontWeight: 800, fontFamily: "'Nanum Myeongjo', serif", marginBottom: 8 }}>배수연</div>
-              <div style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>
-                이룸수학 원장<br />
-                20년 경력 수학 전문 강사<br />
-                중등·고등 내신 전문
+            <div>
+              <img
+                src="/teacher.png"
+                alt="배수연 선생님 - 이룸수학 원장"
+                style={{
+                  width: '100%', objectFit: 'contain',
+                  display: 'block', borderRadius: 24,
+                }}
+              />
+              <div style={{ textAlign: 'center', marginTop: 20 }}>
+                <div style={{ fontSize: 22, fontWeight: 800, color: '#1a1a2e', fontFamily: "'Nanum Myeongjo', serif" }}>배수연</div>
+                <div style={{ fontSize: 14, color: '#888', marginTop: 6 }}>이룸수학 원장 · 20년 경력</div>
               </div>
             </div>
           </FadeIn>
