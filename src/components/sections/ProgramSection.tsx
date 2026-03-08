@@ -90,7 +90,7 @@ export default function ProgramSection({ scrollTo }: ProgramSectionProps) {
               프로그램 상담 신청 →
             </button>
             <div style={{ marginTop: 12, fontSize: 12, color: '#bbb' }}>
-              반당 최대 4명 · 잔여석이 적을 수 있습니다
+              반당 최대 5명 · 잔여석이 적을 수 있습니다
             </div>
           </div>
         </FadeIn>

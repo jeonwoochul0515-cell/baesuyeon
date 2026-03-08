@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import FadeIn from '../common/FadeIn';
-import { PHONE } from '../../data/constants';
+import { PHONE, ADDRESS } from '../../data/constants';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: '', phone: '', grade: '', message: '' });
@@ -34,7 +34,7 @@ export default function ContactSection() {
           }}>
             {[
               { icon: '🏆', text: '서울대·의대 합격 배출' },
-              { icon: '👥', text: '반당 최대 4명' },
+              { icon: '👥', text: '반당 최대 5명' },
               { icon: '📅', text: '20년 경력' },
             ].map((t, i) => (
               <div key={i} style={{
@@ -149,8 +149,57 @@ export default function ContactSection() {
             textAlign: 'center',
             fontSize: 14, color: '#AA7744', lineHeight: 1.6,
           }}>
-            <strong>반당 최대 4명</strong> 소규모 수업으로 운영되어 정원이 제한됩니다.<br />
+            <strong>반당 최대 5명</strong> 소규모 수업으로 운영되어 정원이 제한됩니다.<br />
             조기 마감될 수 있으니 미리 상담 신청해 주세요.
+          </div>
+
+          {/* Location & Google Maps */}
+          <div style={{
+            marginTop: 32, background: 'white', borderRadius: 24, overflow: 'hidden',
+            boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
+            border: '1px solid rgba(0,0,0,0.04)',
+          }}>
+            <div style={{
+              width: '100%', height: 280, position: 'relative',
+              background: '#f0f0f0',
+            }}>
+              <iframe
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=%EA%B2%BD%EC%A3%BC%EC%8B%9C+%EC%9A%A9%EB%8B%B4%EB%A1%9C+104%EB%B2%88%EA%B8%B8+29-2"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="이룸수학 위치"
+              />
+            </div>
+            <div style={{ padding: '24px 28px' }}>
+              <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 8, color: '#1a1a2e' }}>
+                {ADDRESS}
+              </div>
+              <div style={{ fontSize: 13, color: '#888', marginBottom: 16, lineHeight: 1.6 }}>
+                경주시 용강동 위치
+              </div>
+              <a
+                href="https://maps.google.com/?q=%EA%B2%BD%EC%A3%BC%EC%8B%9C+%EC%9A%A9%EB%8B%B4%EB%A1%9C+104%EB%B2%88%EA%B8%B8+29-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 8,
+                  padding: '12px 24px',
+                  background: '#4285F4',
+                  color: 'white',
+                  borderRadius: 30,
+                  fontSize: 14, fontWeight: 600,
+                  textDecoration: 'none',
+                  transition: 'all 0.3s',
+                  boxShadow: '0 4px 12px rgba(66,133,244,0.3)',
+                }}
+              >
+                <span style={{ fontSize: 18 }}>📍</span> Google 지도에서 보기
+              </a>
+            </div>
           </div>
         </FadeIn>
       </div>

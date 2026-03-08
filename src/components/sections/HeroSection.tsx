@@ -28,7 +28,7 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
           animation: 'fadeInUp 0.8s ease, badgePulse 2.5s ease-in-out infinite',
           letterSpacing: 1,
         }}>
-          반당 최대 4명 · 잔여석 문의
+          반당 최대 5명 · 잔여석 문의
         </div>
 
         <h1

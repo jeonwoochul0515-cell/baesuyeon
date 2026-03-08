@@ -1,5 +1,5 @@
 export const PHONE = "010-4812-6947";
-export const ADDRESS = "경상북도 경주시 황성로28번길 6";
+export const ADDRESS = "경주시 용담로 104번길 29-2 2층 (이룸수학)";
 export const BLOG_URL = "https://blog.naver.com/kimchi295";
 export const REGISTRATION = "신고 제2037-7호";
 
@@ -14,7 +14,9 @@ export const SECTIONS = [
 
 export const TARGET_SCHOOLS = [
   "경주고", "문화고", "계림고", "경주여고",
-  "근화여고", "선덕여고", "황성중", "선덕여중"
+  "근화여고", "선덕여고", "선덕여중",
+  "월성중", "경주중", "계림중", "경주여중",
+  "근화여중", "서라벌여중", "화랑중"
 ];
 
 export const SYSTEM_TAGS = [
@@ -28,7 +30,7 @@ export const SYSTEM_TAGS = [
 
 export const STRENGTHS = [
   { num: "20", unit: "년", label: "수학 전문 경력", sub: "경주 지역 전문" },
-  { num: "4", unit: "명", label: "최대 수업 인원", sub: "소규모 그룹 수업" },
+  { num: "5", unit: "명", label: "최대 수업 인원", sub: "소규모 그룹 수업" },
   { num: "1:1", unit: "", label: "맞춤형 지도", sub: "개인별 수준 맞춤" },
 ];
 
