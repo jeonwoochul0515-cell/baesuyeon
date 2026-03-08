@@ -69,6 +69,29 @@ export default function ContactSection() {
             </div>
           </a>
 
+          <a
+            href="https://open.kakao.com/o/pnVVYrki"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16,
+              padding: '24px 32px',
+              background: '#FEE500',
+              borderRadius: 24, marginBottom: 32,
+              textDecoration: 'none',
+              boxShadow: '0 12px 40px rgba(254,229,0,0.25)',
+              transition: 'all 0.3s',
+            }}
+          >
+            <svg width="36" height="36" viewBox="0 0 256 256" fill="none">
+              <path d="M128 36C70.6 36 24 72.2 24 116.8c0 29 19.5 54.4 48.8 68.8-2.1 7.8-7.6 28.3-8.7 32.7-.1.5-.2 1.1.2 1.5.4.4 1 .5 1.5.3 5.5-1.2 31.6-21.4 36.6-25 8.3 1.2 16.9 1.8 25.6 1.8 57.4 0 104-36.2 104-80.8S185.4 36 128 36z" fill="#3C1E1E"/>
+            </svg>
+            <div>
+              <div style={{ color: 'rgba(60,30,30,0.7)', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>카카오톡 상담 문의</div>
+              <div style={{ color: '#3C1E1E', fontSize: 22, fontWeight: 900 }}>카카오톡으로 상담하기</div>
+            </div>
+          </a>
+
           <div style={{
             background: 'white', borderRadius: 24, padding: 36,
             boxShadow: '0 4px 24px rgba(0,0,0,0.04)',

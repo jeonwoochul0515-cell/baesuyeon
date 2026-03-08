@@ -136,6 +136,21 @@ export default function App() {
         >
           📞 전화
         </a>
+        <a
+          href="https://open.kakao.com/o/pnVVYrki"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            background: '#FEE500', color: '#3C1E1E',
+            border: 'none',
+            borderRadius: 30,
+            padding: '10px 20px', fontSize: 14, fontWeight: 600,
+            textDecoration: 'none',
+            transition: 'background 0.2s',
+          }}
+        >
+          💬 카톡
+        </a>
       </div>
     </>
   );
