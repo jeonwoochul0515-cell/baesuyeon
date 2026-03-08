@@ -22,13 +22,10 @@ export default function Navbar({ activeNav, scrollY, menuOpen, setMenuOpen, scro
     >
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <button onClick={() => scrollTo('home')} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 10 }}>
-          <div style={{
+          <img src="/icons/icon-192x192.png" alt="이룸수학 로고" style={{
             width: 40, height: 40, borderRadius: 12,
-            background: 'linear-gradient(135deg, #FF6B6B, #ee5a24)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: 'white', fontWeight: 900, fontSize: 18,
-            fontFamily: "'Nanum Myeongjo', serif",
-          }}>이</div>
+            objectFit: 'contain',
+          }} />
           <span style={{
             fontSize: 18, fontWeight: 800, letterSpacing: -0.5,
             color: scrollY > 80 ? '#1a1a2e' : 'white',

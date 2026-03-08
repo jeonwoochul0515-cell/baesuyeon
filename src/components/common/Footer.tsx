@@ -15,13 +15,10 @@ export default function Footer({ scrollTo }: FooterProps) {
       <div style={{ maxWidth: 1000, margin: '0 auto', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-            <div style={{
+            <img src="/icons/icon-192x192.png" alt="이룸수학 로고" style={{
               width: 36, height: 36, borderRadius: 10,
-              background: 'linear-gradient(135deg, #FF6B6B, #ee5a24)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              color: 'white', fontWeight: 900, fontSize: 16,
-              fontFamily: "'Nanum Myeongjo', serif",
-            }}>이</div>
+              objectFit: 'contain',
+            }} />
             <span style={{ fontSize: 16, fontWeight: 700, color: 'rgba(255,255,255,0.8)' }}>이룸수학</span>
           </div>
           <div style={{ fontSize: 13, lineHeight: 2 }}>
