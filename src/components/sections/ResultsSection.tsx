@@ -8,11 +8,11 @@ interface ResultsSectionProps {
 
 export default function ResultsSection({ scrollTo }: ResultsSectionProps) {
   return (
-    <section id="results" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #FAFAF7 0%, #F5F3EE 100%)' }}>
+    <section id="results" style={{ padding: '88px 0', background: 'var(--bg-soft)' }}>
       <div className="container" style={{ maxWidth: 1100, margin: '0 auto', padding: '0 32px' }}>
         <FadeIn>
-          <div style={{ textAlign: 'center', marginBottom: 60 }}>
-            <span className="section-label" style={{ background: '#FFF5E6', color: '#FF8C42' }}>RESULTS</span>
+          <div style={{ textAlign: 'center', marginBottom: 56 }}>
+            <span className="section-label">RESULTS</span>
             <h2 className="section-title" style={{ fontFamily: "'Nanum Myeongjo', serif", fontSize: 36, fontWeight: 800, letterSpacing: -0.5 }}>
               우리 학생들의 이야기
             </h2>
@@ -23,9 +23,8 @@ export default function ResultsSection({ scrollTo }: ResultsSectionProps) {
         {/* Grade Improvement Cases */}
         <FadeIn delay={0.1}>
           <div style={{ marginBottom: 48 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
-              <span style={{ fontSize: 24 }}>📈</span>
-              <h3 style={{ fontSize: 20, fontWeight: 800, fontFamily: "'Nanum Myeongjo', serif" }}>성적 상승 사례</h3>
+            <div style={{ marginBottom: 24 }}>
+              <h3 style={{ fontSize: 20, fontWeight: 800, fontFamily: "'Nanum Myeongjo', serif", color: 'var(--ink)' }}>성적 상승 사례</h3>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 20 }}>
@@ -102,19 +101,15 @@ export default function ResultsSection({ scrollTo }: ResultsSectionProps) {
         {/* University Admission Cases */}
         <FadeIn delay={0.2}>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
-              <span style={{ fontSize: 24 }}>🎓</span>
-              <h3 style={{ fontSize: 20, fontWeight: 800, fontFamily: "'Nanum Myeongjo', serif" }}>대학 합격 사례</h3>
+            <div style={{ marginBottom: 24 }}>
+              <h3 style={{ fontSize: 20, fontWeight: 800, fontFamily: "'Nanum Myeongjo', serif", color: 'var(--ink)' }}>대학 합격 사례</h3>
             </div>
 
             <div style={{
-              background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
-              borderRadius: 24, padding: '40px 32px',
-              position: 'relative', overflow: 'hidden',
+              background: 'var(--primary-dark)',
+              borderRadius: 20, padding: '40px 32px',
             }}>
-              <div style={{ position: 'absolute', inset: 0, opacity: 0.03, background: 'radial-gradient(circle at 70% 30%, white 0%, transparent 50%)' }} />
-
-              <div style={{ position: 'relative', zIndex: 1 }}>
+              <div>
                 <div style={{ textAlign: 'center', marginBottom: 32 }}>
                   <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)', fontWeight: 600, letterSpacing: 2, marginBottom: 8 }}>2026 수시 합격 현황</div>
                   <div style={{ fontSize: 24, fontWeight: 800, color: 'white', fontFamily: "'Nanum Myeongjo', serif" }}>
@@ -137,8 +132,7 @@ export default function ResultsSection({ scrollTo }: ResultsSectionProps) {
                       onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; e.currentTarget.style.borderColor = u.color + '40'; }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; }}
                     >
-                      <div style={{ fontSize: 28, marginBottom: 10 }}>{u.emoji}</div>
-                      <div style={{ fontSize: 12, color: u.color, fontWeight: 700, marginBottom: 6 }}>{u.type}</div>
+                      <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', fontWeight: 700, marginBottom: 6 }}>{u.type}</div>
                       <div style={{ fontSize: 16, fontWeight: 800, color: 'white', marginBottom: 4 }}>{u.univ}</div>
                       <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>{u.dept}</div>
                       <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', marginTop: 8 }}>{u.name} 학생</div>
@@ -161,9 +155,8 @@ export default function ResultsSection({ scrollTo }: ResultsSectionProps) {
         {/* Testimonials */}
         <FadeIn delay={0.3}>
           <div style={{ marginTop: 48 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
-              <span style={{ fontSize: 24 }}>💬</span>
-              <h3 style={{ fontSize: 20, fontWeight: 800, fontFamily: "'Nanum Myeongjo', serif" }}>학부모 후기</h3>
+            <div style={{ marginBottom: 24 }}>
+              <h3 style={{ fontSize: 20, fontWeight: 800, fontFamily: "'Nanum Myeongjo', serif", color: 'var(--ink)' }}>학부모 후기</h3>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 20 }}>
@@ -178,16 +171,16 @@ export default function ResultsSection({ scrollTo }: ResultsSectionProps) {
                     boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
                   }}
                 >
-                  <div style={{ fontSize: 16, marginBottom: 14, letterSpacing: 2 }}>
-                    {'⭐'.repeat(t.stars)}
+                  <div style={{ fontSize: 15, marginBottom: 14, letterSpacing: 2, color: 'var(--gold)' }}>
+                    {'★'.repeat(t.stars)}
                   </div>
-                  <p style={{ fontSize: 15, color: '#555', lineHeight: 1.8, marginBottom: 16 }}>
+                  <p style={{ fontSize: 15, color: 'var(--text)', lineHeight: 1.8, marginBottom: 16 }}>
                     "{t.text}"
                   </p>
                   <div style={{
-                    fontSize: 13, color: '#aaa', fontWeight: 600,
+                    fontSize: 13, color: 'var(--muted)', fontWeight: 600,
                     paddingTop: 14,
-                    borderTop: '1px solid #f0f0f0',
+                    borderTop: '1px solid var(--line)',
                   }}>
                     — {t.parent}
                   </div>
@@ -201,24 +194,19 @@ export default function ResultsSection({ scrollTo }: ResultsSectionProps) {
         <FadeIn delay={0.4}>
           <div style={{
             marginTop: 48, textAlign: 'center',
-            padding: '40px 24px',
-            background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
-            borderRadius: 24,
-            position: 'relative', overflow: 'hidden',
+            padding: '44px 24px',
+            background: 'var(--primary-dark)',
+            borderRadius: 20,
           }}>
-            <div style={{
-              position: 'absolute', inset: 0, opacity: 0.05,
-              background: 'radial-gradient(circle at 50% 50%, rgba(255,107,107,0.5) 0%, transparent 60%)',
-            }} />
-            <div style={{ position: 'relative', zIndex: 1 }}>
+            <div>
               <div style={{ fontSize: 22, fontWeight: 800, color: 'white', marginBottom: 10, fontFamily: "'Nanum Myeongjo', serif" }}>
                 다음 성공 이야기의 주인공은<br />우리 아이가 될 수 있습니다
               </div>
-              <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)', marginBottom: 24 }}>
+              <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', marginBottom: 24 }}>
                 서울대·의대 합격생을 배출한 검증된 시스템으로 시작하세요
               </div>
-              <button className="cta-btn cta-pulse" onClick={() => scrollTo('contact')} style={{ fontSize: 16, padding: '16px 40px' }}>
-                무료 상담 신청하기 →
+              <button className="cta-btn" onClick={() => scrollTo('contact')} style={{ fontSize: 16, padding: '15px 38px', background: '#fff', color: 'var(--primary-dark)', boxShadow: 'none' }}>
+                무료 상담 신청
               </button>
             </div>
           </div>

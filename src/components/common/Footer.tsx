@@ -9,7 +9,7 @@ interface FooterProps {
 export default function Footer({ scrollTo }: FooterProps) {
   return (
     <footer style={{
-      background: '#1a1a2e', color: 'rgba(255,255,255,0.5)',
+      background: 'var(--ink)', color: 'rgba(255,255,255,0.55)',
       padding: '48px 32px',
     }}>
       <div style={{ maxWidth: 1000, margin: '0 auto', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
@@ -22,10 +22,10 @@ export default function Footer({ scrollTo }: FooterProps) {
             <span style={{ fontSize: 16, fontWeight: 700, color: 'rgba(255,255,255,0.8)' }}>이룸수학</span>
           </div>
           <div style={{ fontSize: 13, lineHeight: 2 }}>
-            📍 {ADDRESS}<br />
-            📞 {PHONE}<br />
-            🕐 평일 · 주말 수업 운영<br />
-            📋 {REGISTRATION}
+            {ADDRESS}<br />
+            {PHONE}<br />
+            평일 · 주말 수업 운영<br />
+            {REGISTRATION}
           </div>
         </div>
 
@@ -60,7 +60,7 @@ export default function Footer({ scrollTo }: FooterProps) {
               target="_blank"
               rel="noreferrer"
               style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color 0.2s' }}
-              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#4ECDC4')}
+              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = '#9DBBE8')}
               onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(255,255,255,0.4)')}
             >
               네이버 블로그 →
@@ -86,7 +86,7 @@ export default function Footer({ scrollTo }: FooterProps) {
         paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)',
         fontSize: 12, textAlign: 'center', color: 'rgba(255,255,255,0.25)',
       }}>
-        © 2025 이룸수학. All rights reserved.
+        © 2026 이룸수학. All rights reserved.
       </div>
     </footer>
   );

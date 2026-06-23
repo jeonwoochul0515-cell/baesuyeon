@@ -13,16 +13,16 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" style={{ padding: '80px 0 100px', background: 'linear-gradient(180deg, #FAFAF7 0%, #F0EDE6 100%)' }}>
+    <section id="contact" style={{ padding: '88px 0 100px', background: 'var(--bg-soft)' }}>
       <div className="container" style={{ maxWidth: 700, margin: '0 auto', padding: '0 32px' }}>
         <FadeIn>
           <div style={{ textAlign: 'center', marginBottom: 40 }}>
-            <span className="section-label" style={{ background: '#FFF0F0', color: '#FF6B6B' }}>CONTACT</span>
+            <span className="section-label">CONTACT</span>
             <h2 className="section-title" style={{ fontFamily: "'Nanum Myeongjo', serif", fontSize: 36, fontWeight: 800, letterSpacing: -0.5 }}>
               지금 바로 상담 신청하세요
             </h2>
-            <p style={{ fontSize: 16, color: '#888', marginTop: 12, lineHeight: 1.7 }}>
-              상담은 <strong style={{ color: '#FF6B6B' }}>무료</strong>이며, 아이의 현재 수준과 목표에 맞는 학습 방향을 안내드립니다.
+            <p style={{ fontSize: 16, color: 'var(--text)', marginTop: 12, lineHeight: 1.7 }}>
+              상담은 <strong style={{ color: 'var(--primary)' }}>무료</strong>이며, 아이의 현재 수준과 목표에 맞는 학습 방향을 안내드립니다.
             </p>
           </div>
         </FadeIn>
@@ -32,18 +32,14 @@ export default function ContactSection() {
           <div style={{
             display: 'flex', justifyContent: 'center', gap: 20, marginBottom: 32, flexWrap: 'wrap',
           }}>
-            {[
-              { icon: '🏆', text: '서울대·의대 합격 배출' },
-              { icon: '👥', text: '반당 최대 5명' },
-              { icon: '📅', text: '20년 경력' },
-            ].map((t, i) => (
+            {['서울대·의대 합격 배출', '반당 최대 5명', '20년 경력'].map((t, i) => (
               <div key={i} style={{
                 display: 'flex', alignItems: 'center', gap: 6,
-                padding: '8px 16px', background: 'white',
-                borderRadius: 30, fontSize: 13, fontWeight: 600, color: '#666',
-                border: '1px solid rgba(0,0,0,0.06)',
+                padding: '8px 16px', background: '#fff',
+                borderRadius: 8, fontSize: 13, fontWeight: 600, color: 'var(--text)',
+                border: '1px solid var(--line)',
               }}>
-                <span>{t.icon}</span> {t.text}
+                {t}
               </div>
             ))}
           </div>
@@ -53,18 +49,16 @@ export default function ContactSection() {
           <a
             href={`tel:${PHONE.replace(/-/g, '')}`}
             style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16,
-              padding: '28px 32px',
-              background: 'linear-gradient(135deg, #FF6B6B 0%, #ee5a24 100%)',
-              borderRadius: 24, marginBottom: 32,
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12,
+              padding: '26px 32px',
+              background: 'var(--primary)',
+              borderRadius: 16, marginBottom: 20,
               textDecoration: 'none',
-              boxShadow: '0 12px 40px rgba(255,107,107,0.25)',
-              transition: 'all 0.3s',
+              boxShadow: '0 6px 20px rgba(36,86,166,0.2)',
             }}
           >
-            <span style={{ fontSize: 32 }}>📞</span>
-            <div>
-              <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>지금 바로 전화 상담</div>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ color: 'rgba(255,255,255,0.85)', fontSize: 13, fontWeight: 500, marginBottom: 4 }}>지금 바로 전화 상담</div>
               <div style={{ color: 'white', fontSize: 28, fontWeight: 900, letterSpacing: 1 }}>{PHONE}</div>
             </div>
           </a>
@@ -74,13 +68,12 @@ export default function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16,
-              padding: '24px 32px',
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14,
+              padding: '22px 32px',
               background: '#FEE500',
-              borderRadius: 24, marginBottom: 32,
+              borderRadius: 16, marginBottom: 32,
               textDecoration: 'none',
-              boxShadow: '0 12px 40px rgba(254,229,0,0.25)',
-              transition: 'all 0.3s',
+              boxShadow: '0 6px 20px rgba(254,229,0,0.25)',
             }}
           >
             <svg width="36" height="36" viewBox="0 0 256 256" fill="none">
@@ -93,20 +86,19 @@ export default function ContactSection() {
           </a>
 
           <div style={{
-            background: 'white', borderRadius: 24, padding: 36,
-            boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
-            border: '1px solid rgba(0,0,0,0.04)',
+            background: '#fff', borderRadius: 16, padding: 36,
+            boxShadow: 'var(--shadow)',
+            border: '1px solid var(--line)',
           }}>
-            <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 8, textAlign: 'center' }}>💬 온라인 상담 신청</div>
-            <div style={{ fontSize: 13, color: '#aaa', textAlign: 'center', marginBottom: 24 }}>
+            <div style={{ fontSize: 18, fontWeight: 700, marginBottom: 8, textAlign: 'center', color: 'var(--ink)' }}>온라인 상담 신청</div>
+            <div style={{ fontSize: 13, color: 'var(--muted)', textAlign: 'center', marginBottom: 24 }}>
               이름과 연락처만 남겨주시면 빠르게 연락드립니다
             </div>
 
             {formSent ? (
               <div style={{ textAlign: 'center', padding: '40px 0' }}>
-                <div style={{ fontSize: 48, marginBottom: 16 }}>✅</div>
-                <div style={{ fontSize: 18, fontWeight: 700, color: '#4ECDC4' }}>신청이 완료되었습니다!</div>
-                <div style={{ fontSize: 14, color: '#888', marginTop: 8 }}>빠른 시간 내에 연락드리겠습니다.</div>
+                <div style={{ fontSize: 18, fontWeight: 700, color: 'var(--primary)' }}>신청이 완료되었습니다</div>
+                <div style={{ fontSize: 14, color: 'var(--text)', marginTop: 8 }}>빠른 시간 내에 연락드리겠습니다.</div>
               </div>
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -127,7 +119,7 @@ export default function ContactSection() {
                   className="input-field"
                   value={formData.grade}
                   onChange={(e) => setFormData({ ...formData, grade: e.target.value })}
-                  style={{ color: formData.grade ? '#1a1a2e' : '#aaa' }}
+                  style={{ color: formData.grade ? 'var(--ink)' : 'var(--muted)' }}
                 >
                   <option value="">학년 선택 (선택사항)</option>
                   <option>초등 3학년</option>
@@ -150,13 +142,13 @@ export default function ContactSection() {
                   style={{ resize: 'vertical' }}
                 />
                 <button
-                  className="cta-btn cta-pulse"
+                  className="cta-btn"
                   onClick={handleSubmit}
-                  style={{ width: '100%', justifyContent: 'center', fontSize: 17, marginTop: 4, padding: '18px 36px' }}
+                  style={{ width: '100%', justifyContent: 'center', fontSize: 17, marginTop: 4, padding: '17px 36px' }}
                 >
                   무료 상담 신청하기
                 </button>
-                <div style={{ textAlign: 'center', fontSize: 12, color: '#bbb', marginTop: 4 }}>
+                <div style={{ textAlign: 'center', fontSize: 12, color: 'var(--muted)', marginTop: 4 }}>
                   개인정보는 상담 목적으로만 사용되며 안전하게 관리됩니다
                 </div>
               </div>
@@ -166,21 +158,20 @@ export default function ContactSection() {
           {/* Urgency note */}
           <div style={{
             marginTop: 24, padding: '16px 20px',
-            background: '#FFF8F0',
-            border: '1px solid rgba(255,140,66,0.15)',
-            borderRadius: 16,
+            background: 'var(--bg-tint)',
+            border: '1px solid #DCE6F5',
+            borderRadius: 12,
             textAlign: 'center',
-            fontSize: 14, color: '#AA7744', lineHeight: 1.6,
+            fontSize: 14, color: 'var(--primary-dark)', lineHeight: 1.6,
           }}>
-            <strong>반당 최대 5명</strong> 소규모 수업으로 운영되어 정원이 제한됩니다.<br />
-            조기 마감될 수 있으니 미리 상담 신청해 주세요.
+            <strong>반당 최대 5명</strong> 소규모로 운영되어 정원이 제한됩니다. 미리 상담 신청해 주세요.
           </div>
 
           {/* Location & Google Maps */}
           <div style={{
-            marginTop: 32, background: 'white', borderRadius: 24, overflow: 'hidden',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
-            border: '1px solid rgba(0,0,0,0.04)',
+            marginTop: 32, background: '#fff', borderRadius: 16, overflow: 'hidden',
+            boxShadow: 'var(--shadow)',
+            border: '1px solid var(--line)',
           }}>
             <div style={{
               width: '100%', height: 280, position: 'relative',
@@ -198,11 +189,11 @@ export default function ContactSection() {
               />
             </div>
             <div style={{ padding: '24px 28px' }}>
-              <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 8, color: '#1a1a2e' }}>
+              <div style={{ fontSize: 16, fontWeight: 700, marginBottom: 8, color: 'var(--ink)' }}>
                 {ADDRESS}
               </div>
-              <div style={{ fontSize: 13, color: '#888', marginBottom: 16, lineHeight: 1.6 }}>
-                경주시 용강동 위치
+              <div style={{ fontSize: 13, color: 'var(--text)', marginBottom: 16, lineHeight: 1.6 }}>
+                경주시 황성동 위치
               </div>
               <a
                 href="https://maps.google.com/?q=%EA%B2%BD%EC%A3%BC%EC%8B%9C+%EC%9A%A9%EB%8B%B4%EB%A1%9C+104%EB%B2%88%EA%B8%B8+29-2"
@@ -213,34 +204,33 @@ export default function ContactSection() {
                   padding: '12px 24px',
                   background: '#4285F4',
                   color: 'white',
-                  borderRadius: 30,
+                  borderRadius: 8,
                   fontSize: 14, fontWeight: 600,
                   textDecoration: 'none',
-                  transition: 'all 0.3s',
-                  boxShadow: '0 4px 12px rgba(66,133,244,0.3)',
+                  boxShadow: '0 4px 12px rgba(66,133,244,0.25)',
                 }}
               >
-                <span style={{ fontSize: 18 }}>📍</span> Google 지도에서 보기
+                Google 지도에서 보기
               </a>
             </div>
           </div>
 
           {/* Blog & Instagram */}
           <div style={{
-            marginTop: 32, background: 'white', borderRadius: 24, padding: 36,
-            boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
-            border: '1px solid rgba(0,0,0,0.04)',
+            marginTop: 32, background: '#fff', borderRadius: 16, padding: 36,
+            boxShadow: 'var(--shadow)',
+            border: '1px solid var(--line)',
             textAlign: 'center',
           }}>
-            <div style={{ fontSize: 20, fontWeight: 800, marginBottom: 8, color: '#1a1a2e' }}>
+            <div style={{ fontSize: 20, fontWeight: 800, marginBottom: 8, color: 'var(--ink)' }}>
               좀 더 자세한 이야기를 듣고 싶다면?
             </div>
-            <div style={{ fontSize: 14, color: '#888', marginBottom: 28, lineHeight: 1.6 }}>
+            <div style={{ fontSize: 14, color: 'var(--text)', marginBottom: 28, lineHeight: 1.6 }}>
               이룸수학의 수업 이야기, 학생 후기, 수학 공부 팁을 확인하세요
             </div>
             <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
               <a
-                href="https://blog.naver.com/kimchi295"
+                href="https://blog.naver.com/iroommath1"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

@@ -8,7 +8,7 @@ export const GRADE_IMPROVEMENTS: GradeImprovement[] = [
     before: "중위권",
     after: "서울대·고려대",
     period: "3년 수강",
-    color: "#FF6B6B",
+    color: "#2456A6",
     quote: "3년간 내신·수능 학습 시스템의 힘으로 서울대·고려대에 동시 합격했습니다",
   },
   {
@@ -18,7 +18,7 @@ export const GRADE_IMPROVEMENTS: GradeImprovement[] = [
     before: "의대 목표",
     after: "의대 3관왕",
     period: "3년 수강",
-    color: "#6C5CE7",
+    color: "#1B3F7A",
     quote: "3년 내내 이룸수학 시스템으로 전남대·원광대·조선대 의대 동시 합격!",
   },
   {
@@ -28,7 +28,7 @@ export const GRADE_IMPROVEMENTS: GradeImprovement[] = [
     before: "이공계 목표",
     after: "GIST 합격",
     period: "꾸준 수강",
-    color: "#4ECDC4",
+    color: "#5B82C0",
     quote: "성균관대 어문계열과 GIST에 동시 합격! 배쌤이 만든 또 하나의 기적",
   },
   {
@@ -38,16 +38,16 @@ export const GRADE_IMPROVEMENTS: GradeImprovement[] = [
     before: "40점",
     after: "50점 향상",
     period: "단기 향상",
-    color: "#FFD93D",
+    color: "#C2912F",
     quote: "수학 성적 40점에서 50점 향상! 체계적 기출 분석과 유형 반복의 결과입니다",
   },
 ];
 
 export const UNIVERSITY_RESULTS: UniversityResult[] = [
-  { name: "김○웅", univ: "서울대 · 고려대", dept: "경제학부", type: "3년 수강 · 수시", emoji: "🏛️", color: "#FF6B6B" },
-  { name: "이○○", univ: "전남대 · 원광대 · 조선대", dept: "의과대학 3관왕", type: "3년 수강 · 수시", emoji: "🏥", color: "#4ECDC4" },
-  { name: "○○○", univ: "성균관대학교", dept: "어문계열", type: "수시 합격", emoji: "📚", color: "#6C5CE7" },
-  { name: "○○○", univ: "GIST", dept: "이공계열", type: "동시 합격", emoji: "🔬", color: "#FFD93D" },
+  { name: "김○웅", univ: "서울대 · 고려대", dept: "경제학부", type: "3년 수강 · 수시", emoji: "", color: "#5B82C0" },
+  { name: "이○○", univ: "전남대 · 원광대 · 조선대", dept: "의과대학 3관왕", type: "3년 수강 · 수시", emoji: "", color: "#5B82C0" },
+  { name: "○○○", univ: "성균관대학교", dept: "어문계열", type: "수시 합격", emoji: "", color: "#5B82C0" },
+  { name: "○○○", univ: "GIST", dept: "이공계열", type: "동시 합격", emoji: "", color: "#5B82C0" },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

@@ -4,8 +4,8 @@ export const PROGRAMS: Program[] = [
   {
     grade: "초등부",
     badge: "초3~초6",
-    color: "#4ECDC4",
-    icon: "🌱",
+    color: "#5B82C0",
+    icon: "",
     desc: "수학의 첫 단추를 제대로",
     price: "월 20만원",
     details: [
@@ -17,8 +17,8 @@ export const PROGRAMS: Program[] = [
   {
     grade: "중등부",
     badge: "중1~중3",
-    color: "#FF6B6B",
-    icon: "📐",
+    color: "#2456A6",
+    icon: "",
     desc: "1:1 개별 맞춤수업",
     price: "월 30만원",
     details: [
@@ -32,8 +32,8 @@ export const PROGRAMS: Program[] = [
   {
     grade: "고등부",
     badge: "고1~고3",
-    color: "#6C5CE7",
-    icon: "🎯",
+    color: "#1B3F7A",
+    icon: "",
     desc: "내신반 · 수능반 운영",
     price: "월 40만원",
     details: [
