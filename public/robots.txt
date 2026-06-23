@@ -1,4 +1,31 @@
+# 검색엔진·AI 크롤러 접근 정책 (이룸수학)
 User-agent: *
+Allow: /
+
+# 네이버 검색로봇
+User-agent: Yeti
+Allow: /
+
+# 구글 / 빙
+User-agent: Googlebot
+Allow: /
+User-agent: bingbot
+Allow: /
+
+# AI 검색·응답(RAG) 크롤러 — 인용 노출 허용
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://iroommath.com/sitemap.xml
