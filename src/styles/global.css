@@ -189,6 +189,7 @@ footer { padding-bottom: 84px !important; }
   .program-grid { grid-template-columns: 1fr !important; }
   .exam-grid { grid-template-columns: 1fr 1fr !important; }
   .blog-grid { grid-template-columns: 1fr !important; }
+  .insta-grid { grid-template-columns: 1fr !important; }
   .strength-grid { grid-template-columns: 1fr !important; }
   .desktop-nav { display: none !important; }
   .mobile-menu-btn { display: flex !important; }

@@ -10,7 +10,9 @@ import ProgramSection from './components/sections/ProgramSection';
 import SystemSection from './components/sections/SystemSection';
 import ResultsSection from './components/sections/ResultsSection';
 import BlogSection from './components/sections/BlogSection';
+import InstagramSection from './components/sections/InstagramSection';
 import FAQSection from './components/sections/FAQSection';
+import PromoModal from './components/common/PromoModal';
 import ContactSection from './components/sections/ContactSection';
 
 export default function App() {
@@ -62,6 +64,7 @@ export default function App() {
 
   return (
     <>
+      <PromoModal scrollTo={scrollTo} />
       <Navbar
         activeNav={activeNav}
         scrollY={scrollY}
@@ -100,6 +103,7 @@ export default function App() {
 
       <ResultsSection scrollTo={scrollTo} />
       <BlogSection />
+      <InstagramSection />
       <FAQSection />
       <ContactSection />
       <Footer scrollTo={scrollTo} />
