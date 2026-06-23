@@ -1,6 +1,6 @@
 export const PHONE = "010-4812-6947";
 export const ADDRESS = "경주시 용담로 104번길 29-2 2층 (이룸수학)";
-export const BLOG_URL = "https://blog.naver.com/kimchi295";
+export const BLOG_URL = "https://blog.naver.com/iroommath1";
 export const REGISTRATION = "신고 제2037-7호";
 
 export const SECTIONS = [

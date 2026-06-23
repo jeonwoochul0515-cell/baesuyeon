@@ -44,4 +44,4 @@ npm run build
 
 - 전화: 010-4812-6947
 - 주소: 경주시 용담로 104번길 29-2 2층 (이룸수학)
-- 블로그: https://blog.naver.com/kimchi295
+- 블로그: https://blog.naver.com/iroommath1
