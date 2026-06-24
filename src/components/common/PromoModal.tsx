@@ -1,4 +1,4 @@
-// hakjum.school 가입 학원 — AI 대입 컨설팅 무료 제공 홍보 모달
+// 학점나비(hakjum.school) 가입 학원 — AI 대입 컨설팅 무료 제공 홍보 모달
 import { useEffect, useState } from 'react';
 
 interface PromoModalProps {
@@ -54,42 +54,45 @@ export default function PromoModal({ scrollTo }: PromoModalProps) {
           onClick={close}
           aria-label="닫기"
           style={{
-            position: 'absolute', top: 12, right: 12,
-            background: 'rgba(255,255,255,0.85)', border: 'none',
+            position: 'absolute', top: 12, right: 12, zIndex: 2,
+            background: 'rgba(0,0,0,0.4)', border: 'none',
             width: 32, height: 32, borderRadius: 8,
-            fontSize: 18, cursor: 'pointer', color: '#fff',
+            fontSize: 16, cursor: 'pointer', color: '#fff',
             lineHeight: 1,
           }}
         >
-          <span style={{ color: 'rgba(255,255,255,0.9)' }}>✕</span>
+          ✕
         </button>
 
-        <div style={{
-          background: 'var(--primary-dark)',
-          padding: '32px 28px 26px', textAlign: 'center',
-        }}>
-          <div style={{
-            display: 'inline-block', padding: '5px 14px',
-            background: 'rgba(255,255,255,0.15)', borderRadius: 20,
-            fontSize: 12.5, fontWeight: 700, color: '#fff',
-            marginBottom: 14, letterSpacing: 0.3,
-          }}>
-            hakjum.school 가입 학원
-          </div>
-          <div style={{
-            fontSize: 25, fontWeight: 800, color: '#fff', lineHeight: 1.4,
-            fontFamily: "'Nanum Myeongjo', serif",
-          }}>
-            AI 대입 컨설팅<br />
-            <span style={{ color: '#FFD27A' }}>무료 제공</span>
-          </div>
-        </div>
+        <img
+          src="/hakjum-promo.png"
+          alt="학점나비 - AI 대입 진학 컨설팅 (2028 대입 · 고교학점제)"
+          width={1200}
+          height={630}
+          style={{ display: 'block', width: '100%', height: 'auto' }}
+        />
 
         <div style={{ padding: '24px 28px 26px', textAlign: 'center' }}>
-          <p style={{ fontSize: 15, color: 'var(--text)', lineHeight: 1.75, margin: 0 }}>
-            이룸수학은 <strong style={{ color: 'var(--ink)' }}>hakjum.school 가입 학원</strong>으로,
-            AI 기반 대입 컨설팅을 <strong style={{ color: 'var(--primary)' }}>무료로</strong> 제공합니다.
-            우리 아이에게 맞는 입시 전략을 지금 받아보세요.
+          <div style={{
+            display: 'inline-block', padding: '5px 14px',
+            background: 'var(--bg-tint)', borderRadius: 20,
+            fontSize: 12.5, fontWeight: 700, color: 'var(--primary)',
+            marginBottom: 14, letterSpacing: 0.3,
+          }}>
+            이룸수학 × 학점나비 가입 학원
+          </div>
+
+          <div style={{
+            fontSize: 22, fontWeight: 800, color: 'var(--ink)', lineHeight: 1.4,
+            fontFamily: "'Nanum Myeongjo', serif",
+          }}>
+            AI 대입 컨설팅 <span style={{ color: 'var(--primary)' }}>무료 제공</span>
+          </div>
+
+          <p style={{ fontSize: 14.5, color: 'var(--text)', lineHeight: 1.75, margin: '12px 0 0' }}>
+            이룸수학은 <strong style={{ color: 'var(--ink)' }}>학점나비</strong> 가입 학원입니다.
+            AI 맞춤 과목 추천·진학 설계·입결 분석을
+            <strong style={{ color: 'var(--primary)' }}> 무료로</strong> 받아보세요.
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 22 }}>
@@ -110,7 +113,7 @@ export default function PromoModal({ scrollTo }: PromoModalProps) {
                 fontSize: 15, fontWeight: 600, textDecoration: 'none',
               }}
             >
-              hakjum.school 자세히 보기
+              학점나비 자세히 보기
             </a>
           </div>
 
