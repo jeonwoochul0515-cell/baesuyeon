@@ -33,16 +33,13 @@ export default function FAQSection() {
                     cursor: 'pointer',
                     listStyle: 'none',
                     padding: '20px 0',
-                    fontSize: 17,
-                    fontWeight: 700,
-                    color: 'var(--ink)',
                     display: 'flex',
                     alignItems: 'center',
                     gap: 12,
                   }}
                 >
-                  <span style={{ color: 'var(--primary)', fontWeight: 800 }}>Q.</span>
-                  {item.q}
+                  <span style={{ color: 'var(--primary)', fontWeight: 800, fontSize: 17 }}>Q.</span>
+                  <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700, color: 'var(--ink)', display: 'inline' }}>{item.q}</h3>
                 </summary>
                 <p style={{ fontSize: 15, color: 'var(--text)', lineHeight: 1.85, padding: '0 0 20px', margin: 0 }}>
                   {item.a}
