@@ -1,4 +1,4 @@
-// 첫 화면 히어로 — 화이트 배경, 딥블루 포인트의 차분한 신뢰형 구성
+// 첫 화면 히어로 — 한국 여학생 수학 공부 배경 영상 위 딥네이비 오버레이 + 흰색 텍스트
 import { PHONE, STRENGTHS } from '../../data/constants';
 
 interface HeroSectionProps {
@@ -8,20 +8,36 @@ interface HeroSectionProps {
 export default function HeroSection({ scrollTo }: HeroSectionProps) {
   return (
     <section id="home" className="hero-section">
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/hero-poster.webp"
+        aria-hidden="true"
+      >
+        <source src="/hero-loop.webm" type="video/webm" />
+        <source src="/hero-loop.mp4" type="video/mp4" />
+      </video>
+      <div className="hero-overlay" aria-hidden="true" />
+
       <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: '120px 24px 64px', maxWidth: 820 }}>
         <div style={{
           display: 'inline-block',
           padding: '7px 18px',
-          background: 'var(--bg-tint)',
-          border: '1px solid #DCE6F5',
+          background: 'rgba(255,255,255,0.14)',
+          border: '1px solid rgba(255,255,255,0.35)',
           borderRadius: 8,
           fontSize: 14, fontWeight: 700,
-          color: 'var(--primary)',
+          color: '#fff',
           marginBottom: 28,
           letterSpacing: 0.3,
+          backdropFilter: 'blur(4px)',
           animation: 'fadeInUp 0.7s ease',
         }}>
-          경주 황성동 · 중·고등 수학 전문
+          반당 최대 5명 · 20년 경력 소규모 맞춤
         </div>
 
         <h1
@@ -29,19 +45,24 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
           style={{
             fontFamily: "'Nanum Myeongjo', serif",
             fontSize: 50, fontWeight: 800, lineHeight: 1.3,
-            color: 'var(--ink)', letterSpacing: -1,
+            color: '#fff', letterSpacing: -1,
+            textShadow: '0 2px 18px rgba(0,0,0,0.35)',
             animation: 'fadeInUp 0.7s ease 0.1s both',
           }}
         >
+          <span style={{ display: 'block', fontSize: 20, fontWeight: 700, color: '#BcD2F0', letterSpacing: -0.3, marginBottom: 10 }}>
+            경주 황성동 중·고등 수학학원 이룸수학
+          </span>
           기초부터 입시까지,<br />
-          <span style={{ color: 'var(--primary)' }}>한 명 한 명 맞춰 지도합니다</span>
+          <span style={{ color: '#9FC0EC' }}>한 명 한 명 맞춰 지도합니다</span>
         </h1>
 
         <p
           className="hero-sub"
           style={{
-            fontSize: 19, color: 'var(--text)',
+            fontSize: 19, color: 'rgba(255,255,255,0.92)',
             lineHeight: 1.75, marginTop: 22,
+            textShadow: '0 1px 12px rgba(0,0,0,0.35)',
             animation: 'fadeInUp 0.7s ease 0.2s both',
             fontWeight: 400,
           }}
@@ -54,9 +75,9 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
           marginTop: 18,
           animation: 'fadeInUp 0.7s ease 0.28s both',
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
-          fontSize: 14, color: 'var(--muted)',
+          fontSize: 14, color: 'rgba(255,255,255,0.85)',
         }}>
-          <span style={{ color: 'var(--gold)', letterSpacing: 1 }}>★★★★★</span>
+          <span style={{ color: '#F2C75A', letterSpacing: 1 }}>★★★★★</span>
           <span>서울대·의대 합격생을 배출한 학습 시스템</span>
         </div>
 
@@ -88,7 +109,7 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
         <div style={{
           marginTop: 14,
           animation: 'fadeInUp 0.7s ease 0.42s both',
-          fontSize: 13.5, color: 'var(--muted)',
+          fontSize: 13.5, color: 'rgba(255,255,255,0.78)',
         }}>
           상담은 무료입니다. 부담 없이 문의하세요.
         </div>
@@ -102,10 +123,10 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
           {STRENGTHS.map((s, i) => (
             <div key={i} style={{ textAlign: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: 2 }}>
-                <span style={{ fontSize: 38, fontWeight: 800, color: 'var(--primary)', fontFamily: "'Nanum Myeongjo', serif" }}>{s.num}</span>
-                <span style={{ fontSize: 17, fontWeight: 600, color: 'var(--primary-soft)' }}>{s.unit}</span>
+                <span style={{ fontSize: 38, fontWeight: 800, color: '#fff', fontFamily: "'Nanum Myeongjo', serif", textShadow: '0 1px 12px rgba(0,0,0,0.3)' }}>{s.num}</span>
+                <span style={{ fontSize: 17, fontWeight: 600, color: '#9FC0EC' }}>{s.unit}</span>
               </div>
-              <div style={{ fontSize: 14, color: 'var(--muted)', marginTop: 4, fontWeight: 500 }}>{s.label}</div>
+              <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.82)', marginTop: 4, fontWeight: 500 }}>{s.label}</div>
             </div>
           ))}
         </div>
