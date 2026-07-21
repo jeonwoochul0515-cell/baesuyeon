@@ -1,7 +1,12 @@
 export const PHONE = "010-4812-6947";
 export const ADDRESS = "경주시 용담로 104번길 29-2 2층 (이룸수학)";
 export const BLOG_URL = "https://blog.naver.com/iroommath1";
-export const REGISTRATION = "신고 제2037-7호";
+export const REGISTRATION = "학원신고 제2037-7호";
+
+// 사업자 정보(상거래 사이트 법적 표기)
+export const BIZ_NAME = "이룸수학교습소";
+export const OWNER = "배수연";
+export const BIZ_NO = "265-94-02074";
 
 export const SECTIONS = [
   { id: "home", label: "홈" },

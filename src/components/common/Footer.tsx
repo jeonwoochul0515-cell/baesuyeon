@@ -1,5 +1,5 @@
 
-import { SECTIONS, PHONE, ADDRESS, BLOG_URL, REGISTRATION } from '../../data/constants';
+import { SECTIONS, PHONE, ADDRESS, BLOG_URL, REGISTRATION, BIZ_NAME, OWNER, BIZ_NO } from '../../data/constants';
 import { SEO_TAGS } from '../../data/seo';
 
 interface FooterProps {
@@ -24,7 +24,9 @@ export default function Footer({ scrollTo }: FooterProps) {
           <div style={{ fontSize: 13, lineHeight: 2 }}>
             {ADDRESS}<br />
             {PHONE}<br />
-            평일 · 주말 수업 운영<br />
+            월·수·목·금·토·일 운영 (화요일 휴무)<br />
+            {BIZ_NAME} · 대표 {OWNER}<br />
+            사업자등록번호 {BIZ_NO}<br />
             {REGISTRATION}
           </div>
         </div>
