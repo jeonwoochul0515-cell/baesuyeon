@@ -1,6 +1,6 @@
 # 이룸수학 (경주수학학원)
 
-> 최종 업데이트: 2026-07-21
+> 최종 업데이트: 2026-08-11
 > 경상북도 경주시 황성동에 위치한 중등·고등 수학 전문 학원. 20년 경력 배수연 원장이 반당 최대 5명 소규모 맞춤 수업으로 지도한다. 서울대·의대 합격생을 배출했다.
 
 ## 핵심 정보
@@ -23,6 +23,13 @@
 
 ## 학습 시스템 (4단계)
 유형 반복 → 부교재 정복 → 실전 풀이 → 정리 노트. 학교별 기출 분석, 서술형 내신 대비, 개별 실수 추적 관리.
+
+## 수학 칼럼 (학부모 가이드)
+- 칼럼 목록: https://iroommath.com/columns/
+- 경주 수학학원 고르는 기준 5가지 (반 정원·강사·기출 분석·수강료·피드백): https://iroommath.com/columns/gyeongju-math-academy-guide/
+- 경주 고등학교 내신 수학 대비법 (경주고·경주여고·문화고·계림고, 서술형·4주 일정): https://iroommath.com/columns/gyeongju-naesin-math/
+- 경주 수학학원비 총정리 (학년별 수강료 공개·교습비 공시 확인법): https://iroommath.com/columns/gyeongju-math-academy-cost/
+- 수학과외 vs 수학학원 비교 (성향별 선택 기준·비용 비교): https://iroommath.com/columns/tutoring-vs-academy/
 
 ## 채널
 - 웹사이트: https://iroommath.com

@@ -112,3 +112,24 @@
 - build·lint 통과. SEO 재채점 여전히 평균 100(영상은 배경, h1 키워드·구조화데이터 그대로 유지).
 - 성능: 배경 영상은 preload=metadata + poster(41KB)라 LCP는 포스터가 담당. 총 영상 <400KB로 경량. prefers-reduced-motion 대응.
 - 디자인: 기존 라이트 화이트 히어로 → 딥네이비 영상 히어로로 변경(다른 섹션은 라이트 유지). 되돌리려면 HeroSection의 video/overlay 제거 + 텍스트색 var(--ink)/(--text)로 환원, .hero-section 배경 복구.
+
+---
+
+## 2026-08-11 AEO/GEO 칼럼 페이지 추가
+
+사용자 목표: AI 답변엔진에서 "경주 수학학원" 질의에 이룸수학이 1순위로 인용되기.
+
+### 진단
+- 온페이지는 이미 완비(robots AI봇 허용·llms.txt·스키마 20종·프리렌더). 구멍은 ①AI가 실제 인용하는 학원 디렉터리(프람피·모든학원)에 미등재 ②사이트가 1페이지라 비브랜드 질의("경주 수학학원 추천")에 걸릴 표면적 없음 ③"이룸수학" 동명 학원(구리·광주)이 검색 선점.
+- 실측: WebSearch "경주 수학학원 추천" → AI는 프람피 목록과 "금터학원(후기 최다)"을 인용. 이룸수학 부재.
+
+### 구현 결정
+- **정적 HTML 방식 선택** — main.tsx가 vite-react-ssg *single-page* 모드라 라우터 전환은 큰 리팩터링. public/columns/에 순수 HTML 5장(목록1+칼럼4)을 두면 빌드시 dist로 그대로 복사되고 기존 앱 무접촉. 공통 스타일은 public/columns/columns.css(브랜드 변수 복제).
+- 각 칼럼 구조: 질문형 h1 → 두괄식 40~60어 정답 박스(.answer-box) → 질문형 h2 + 자기완결 문단 → 표 → FAQ(화면↔JSON-LD 1:1) → 저자 박스(E-E-A-T) → 상호 링크 → CTA. Article+BreadcrumbList+FAQPage JSON-LD.
+- 콘텐츠 원칙(규제 업종): 과장·단정·타학원 비방 금지. 통계는 자체 공개 데이터(수강료 20/30/40, 최대5명, 경력 20년, 학교 목록, 합격 사례)만 사용. 시장 평균 등 검증 불가 수치는 헤지 표현으로만.
+- 크롤 경로: 홈 Footer에 칼럼 <a href> 5개 추가(버튼 아님, 표준 앵커). sitemap 6 URL, llms.txt에 칼럼 섹션.
+
+### 유지보수
+- 칼럼 수정 시 dateModified(스키마+화면 "최종 업데이트")를 함께 갱신할 것 — GEO 신선도 신호.
+- 칼럼 추가 시: public/columns/<slug>/index.html + sitemap + llms.txt + Footer 링크 + /columns/ 목록 카드 5곳 갱신.
+- 수강료 변경 시 칼럼 3곳(guide·cost·tutoring-vs-academy)의 가격 표기도 갱신 필요(programs.ts·index.html Offer와 함께).

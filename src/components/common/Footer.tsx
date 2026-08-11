@@ -55,6 +55,29 @@ export default function Footer({ scrollTo }: FooterProps) {
         </div>
 
         <div>
+          <div style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.7)', marginBottom: 12 }}>수학 칼럼</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8, fontSize: 13 }}>
+            {[
+              { href: '/columns/gyeongju-math-academy-guide/', label: '경주 수학학원 고르는 기준 5가지' },
+              { href: '/columns/gyeongju-naesin-math/', label: '경주 고등학교 내신 수학 대비법' },
+              { href: '/columns/gyeongju-math-academy-cost/', label: '경주 수학학원비 총정리' },
+              { href: '/columns/tutoring-vs-academy/', label: '수학과외 vs 수학학원' },
+              { href: '/columns/', label: '칼럼 전체 보기 →' },
+            ].map((c) => (
+              <a
+                key={c.href}
+                href={c.href}
+                style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: 'color 0.2s' }}
+                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = 'rgba(255,255,255,0.8)')}
+                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = 'rgba(255,255,255,0.4)')}
+              >
+                {c.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div>
           <div style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.7)', marginBottom: 12 }}>블로그</div>
           <div style={{ fontSize: 13 }}>
             <a

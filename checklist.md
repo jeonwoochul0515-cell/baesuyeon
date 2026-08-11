@@ -45,3 +45,20 @@
 - [x] 화면 FAQ 질문형 h3 헤딩
 - [x] 구조화 데이터: WebPage/Person/Course+Offer/HowTo/Review 추가
 - [x] build·lint 통과, 6축 전부 100점
+
+---
+
+## 2026-08-11 AEO 칼럼 4편 추가 ("경주 수학학원" AI 인용 타깃)
+- [x] /columns/ 목록 페이지 + 칼럼 4편 정적 HTML 생성 (public/columns/)
+  - [x] 경주 수학학원 고르는 기준 5가지 (gyeongju-math-academy-guide)
+  - [x] 경주 고등학교 내신 수학 대비법 (gyeongju-naesin-math)
+  - [x] 경주 수학학원비 총정리 (gyeongju-math-academy-cost)
+  - [x] 수학과외 vs 수학학원 (tutoring-vs-academy)
+- [x] 각 페이지: 질문형 h1/h2 + 두괄식 정답 박스 + Article/FAQPage/BreadcrumbList JSON-LD + canonical/OG
+- [x] sitemap.xml 1→6 URL 확장, llms.txt 칼럼 섹션 추가
+- [x] 홈 Footer에 칼럼 <a href> 링크 5개 (크롤 경로)
+- [x] build·lint 통과, dist 산출물·JSON-LD 파싱·h1=1 검증
+- [ ] 배포 후 GSC·네이버 Search Advisor 사이트맵 재제출 + 수집요청 (사용자)
+- [ ] 프람피(오늘학교) 학원 등록: https://academy.prompie.com/administrators/intro/ (사용자)
+- [ ] 학부모 리뷰 확보 — 네이버 플레이스·디렉터리 (사용자)
+- [ ] 1개월 뒤 ChatGPT/Perplexity에 "경주 수학학원 추천" 질의해 인용 여부 점검

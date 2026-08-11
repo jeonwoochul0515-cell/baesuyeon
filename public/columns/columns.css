@@ -1,0 +1,113 @@
+/* 수학 칼럼 정적 페이지 공통 스타일 (본체 앱과 동일한 브랜드 톤) */
+:root {
+  --primary: #2456A6;
+  --primary-dark: #1B3F7A;
+  --primary-soft: #5B82C0;
+  --ink: #1B2A41;
+  --text: #3D4A5C;
+  --line: #E3E9F2;
+  --bg-soft: #F4F7FB;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.col-header {
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  position: sticky; top: 0; z-index: 10;
+}
+.col-header .inner {
+  max-width: 780px; margin: 0 auto; padding: 14px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.col-header .brand { font-weight: 800; color: var(--ink); font-size: 17px; }
+.col-header .brand:hover { text-decoration: none; }
+.col-header nav { display: flex; gap: 16px; font-size: 14px; }
+
+main { max-width: 780px; margin: 0 auto; padding: 40px 20px 64px; }
+
+.breadcrumb { font-size: 13px; color: #8A97A8; margin-bottom: 24px; }
+.breadcrumb a { color: #8A97A8; }
+
+article h1 {
+  font-size: clamp(24px, 4.5vw, 34px); line-height: 1.35;
+  color: var(--ink); margin-bottom: 12px; font-weight: 800;
+}
+.meta { font-size: 13px; color: #8A97A8; margin-bottom: 28px; }
+
+.answer-box {
+  background: var(--bg-soft);
+  border-left: 4px solid var(--primary);
+  border-radius: 0 10px 10px 0;
+  padding: 20px 22px;
+  margin-bottom: 36px;
+  font-size: 16.5px;
+  color: var(--ink);
+}
+
+article h2 {
+  font-size: clamp(19px, 3.2vw, 24px); color: var(--ink);
+  margin: 44px 0 14px; font-weight: 700; line-height: 1.4;
+}
+article h3 { font-size: 17px; color: var(--ink); margin: 28px 0 10px; }
+article p { margin-bottom: 16px; font-size: 15.5px; }
+article ul, article ol { margin: 0 0 16px 22px; font-size: 15.5px; }
+article li { margin-bottom: 8px; }
+
+.table-wrap { overflow-x: auto; margin: 0 0 16px; }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+th, td { border: 1px solid var(--line); padding: 10px 14px; text-align: left; }
+th { background: var(--bg-soft); color: var(--ink); font-weight: 700; white-space: nowrap; }
+
+.faq-item { border-bottom: 1px solid var(--line); padding: 18px 0; }
+.faq-item h3 { margin: 0 0 8px; font-size: 16px; }
+.faq-item p { margin: 0; }
+
+.cta {
+  background: var(--ink); color: #fff; border-radius: 14px;
+  padding: 28px 26px; margin-top: 48px; text-align: center;
+}
+.cta strong { display: block; font-size: 19px; margin-bottom: 6px; }
+.cta p { color: rgba(255,255,255,0.75); font-size: 14px; margin-bottom: 16px; }
+.cta a.btn {
+  display: inline-block; background: var(--primary); color: #fff;
+  padding: 12px 28px; border-radius: 999px; font-weight: 700; font-size: 15px;
+}
+.cta a.btn:hover { background: var(--primary-soft); text-decoration: none; }
+
+.related { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); }
+.related h2 { margin-top: 0; font-size: 18px; }
+.related ul { list-style: none; margin: 0; }
+.related li { margin-bottom: 10px; font-size: 15px; }
+
+.author {
+  display: flex; gap: 8px; flex-direction: column;
+  background: var(--bg-soft); border-radius: 12px;
+  padding: 18px 20px; margin-top: 36px; font-size: 14px;
+}
+.author strong { color: var(--ink); }
+
+.col-footer {
+  border-top: 1px solid var(--line); background: var(--bg-soft);
+  font-size: 13px; color: #8A97A8;
+}
+.col-footer .inner { max-width: 780px; margin: 0 auto; padding: 28px 20px; line-height: 2; }
+
+/* 칼럼 목록 카드 */
+.card-list { list-style: none; margin: 0; display: grid; gap: 18px; }
+.card-list li {
+  border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px;
+  transition: box-shadow .2s;
+}
+.card-list li:hover { box-shadow: 0 6px 20px rgba(27,42,65,0.08); }
+.card-list a.title { font-size: 18px; font-weight: 700; color: var(--ink); display: block; margin-bottom: 6px; }
+.card-list p { font-size: 14.5px; margin: 0; }
