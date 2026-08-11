@@ -68,6 +68,32 @@ export default function BlogSection() {
             네이버 블로그 전체 글 보기 →
           </a>
         </div>
+
+        <FadeIn>
+          <div style={{
+            marginTop: 56, background: 'var(--bg-tint, #F4F7FB)', borderRadius: 18,
+            padding: '30px 32px',
+          }}>
+            <h3 style={{ fontSize: 18, fontWeight: 800, color: 'var(--ink)', marginBottom: 6 }}>
+              학부모를 위한 수학 칼럼
+            </h3>
+            <p style={{ fontSize: 14, color: '#888', marginBottom: 18 }}>
+              학원 선택부터 내신 대비까지, 상담 때 자주 받는 질문을 글로 정리했습니다
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {[
+                { href: '/columns/gyeongju-math-academy-guide/', label: '경주 수학학원, 어떻게 골라야 할까? — 학부모 확인 기준 5가지' },
+                { href: '/columns/gyeongju-naesin-math/', label: '경주 고등학교 내신 수학, 어떻게 대비하나? — 학교별 3단계 준비법' },
+                { href: '/columns/gyeongju-math-academy-cost/', label: '경주 수학학원비는 얼마인가요? — 학년별 수강료 총정리' },
+                { href: '/columns/tutoring-vs-academy/', label: '경주에서 수학과외와 수학학원, 어느 쪽이 맞을까?' },
+              ].map((c) => (
+                <a key={c.href} href={c.href} style={{ fontSize: 15, fontWeight: 600, color: 'var(--primary)', textDecoration: 'none' }}>
+                  → {c.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

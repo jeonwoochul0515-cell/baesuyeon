@@ -133,3 +133,19 @@
 - 칼럼 수정 시 dateModified(스키마+화면 "최종 업데이트")를 함께 갱신할 것 — GEO 신선도 신호.
 - 칼럼 추가 시: public/columns/<slug>/index.html + sitemap + llms.txt + Footer 링크 + /columns/ 목록 카드 5곳 갱신.
 - 수강료 변경 시 칼럼 3곳(guide·cost·tutoring-vs-academy)의 가격 표기도 갱신 필요(programs.ts·index.html Offer와 함께).
+
+---
+
+## 2026-08-12 AEO 2차 조치 + 구글 미색인 발견
+
+### 발견 (실측)
+- **구글·빙 계열 검색에 iroommath.com 완전 부재** — "이룸수학 황성동"·"iroommath.com" 질의 모두 미노출. index.html에 google-site-verification 태그 없음 = GSC 미등록 추정. 글로벌 AI(ChatGPT·Perplexity·Gemini)는 구글·빙 색인 기반이라 이게 GEO의 최우선 관문.
+- 네이버는 반대로 양호: webkr "경주 수학학원" 2위(iroommath.com), 브랜드 질의 1위.
+- 프람피 상세 페이지(9es30yk)는 옛 데이터(용강동 주소·구 수강료·리뷰0) — 신규 등록 아닌 claim+수정이 할 일. 학원비알리미(smileus)는 최신 정확(URL 슬러그 "올리브일품배쌤수학교습소" = 교육청 구 등록명 흔적).
+
+### 적용
+- rss.xml에 칼럼 4편 item 추가(맨 앞), lastBuildDate 2026-08-11로 갱신 — 네이버 RSS 제출용.
+- BlogSection 하단에 "학부모를 위한 수학 칼럼" 박스(내부 <a href> 4개) — 칼럼이 푸터에만 있으면 크롤 우선순위 낮아 본문 노출 추가. 홈 프리렌더에 칼럼 링크 총 9개 확인.
+
+### 사용자 안내한 후속(계정 필요해서 사용자 몫)
+- GSC 도메인 속성 등록(TXT값 주면 Cloudflare API로 내가 등록 가능 — iroommath.com zone 있음), Bing Webmaster Tools, 구글 비즈니스 프로필(구글 지도), 당근 비즈프로필, 프람피 claim.
